@@ -1,0 +1,113 @@
+/*
+Modified Atom One Dark and Atom One Light themes for Highlight.js This follows
+the same pattern of supporting a lite and dark mode of the theme.
+
+Atom One Light by Daniel Gamage (Modified)
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+Atom One Dark by Daniel Gamage (Modified)
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+*/
+@mixin styles() {
+  :root {
+    --hljs-attribute: #e45649;
+    --hljs-bg: #fafafa;
+    --hljs-class: #c18401;
+    --hljs-color: #383a42;
+    --hljs-comment: #a0a1a7;
+    --hljs-keyword: #a626a4;
+    --hljs-literal: #0184bb;
+    --hljs-namespace: #986801;
+    --hljs-punctuation: #4078f2;
+    --hljs-variable: #50a14f;
+  }
+
+  body.dark-mode {
+    --hljs-attribute: #e06c75;
+    --hljs-bg: #282c34;
+    --hljs-class: #e6c07b;
+    --hljs-color: #abb2bf;
+    --hljs-comment: #5c6370;
+    --hljs-keyword: #c678dd;
+    --hljs-literal: #56b6c2;
+    --hljs-namespace: #d19a66;
+    --hljs-punctuation: #61aeee;
+    --hljs-variable: #98c379;
+  }
+
+  .hljs {
+    color: var(--hljs-color);
+    background: var(--hljs-bg);
+  }
+
+  .hljs-comment,
+  .hljs-quote {
+    color: var(--hljs-comment);
+    font-style: italic;
+  }
+
+  .hljs-doctag,
+  .hljs-keyword,
+  .hljs-formula {
+    color: var(--hljs-keyword);
+  }
+
+  .hljs-section,
+  .hljs-name,
+  .hljs-selector-tag,
+  .hljs-deletion,
+  .hljs-subst {
+    color: var(--hljs-attribute);
+  }
+
+  .hljs-literal {
+    color: var(--hljs-literal);
+  }
+
+  .hljs-string,
+  .hljs-regexp,
+  .hljs-addition,
+  .hljs-attribute,
+  .hljs-meta .hljs-string {
+    color: var(--hljs-variable);
+  }
+
+  .hljs-attr,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-type,
+  .hljs-selector-class,
+  .hljs-selector-attr,
+  .hljs-selector-pseudo,
+  .hljs-number {
+    color: var(--hljs-namespace);
+  }
+
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-code,
+  .hljs-link,
+  .hljs-meta,
+  .hljs-selector-id,
+  .hljs-title {
+    color: var(--hljs-punctuation);
+  }
+
+  .hljs-built_in,
+  .hljs-title.class_,
+  .hljs-class .hljs-title {
+    color: var(--hljs-class);
+  }
+
+  .hljs-emphasis {
+    font-style: italic;
+  }
+
+  .hljs-strong {
+    font-weight: bold;
+  }
+
+  .hljs-link {
+    text-decoration: underline;
+  }
+}

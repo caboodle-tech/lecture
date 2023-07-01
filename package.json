@@ -1,0 +1,24 @@
+{
+    "bin": {
+        "lecture": "bin/lecture.js"
+    },
+    "devDependencies": {
+        "@rollup/plugin-babel": "^6.0.3",
+        "@rollup/plugin-commonjs": "^24.1.0",
+        "@rollup/plugin-terser": "^0.4.1",
+        "eslint": "^8.22.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "magic-string": "^0.30.0",
+        "mathjax-full": "^3.2.2",
+        "mermaid": "^10.1.0",
+        "rollup": "^3.20.2",
+        "sass": "^1.62.0"
+    },
+    "dependencies": {
+        "htmlparser2": "^8.0.2",
+        "node-html-parser": "^6.1.5"
+    },
+    "main": "./bin/lectures.js",
+    "man": "bin/man/lecture.1"
+}
