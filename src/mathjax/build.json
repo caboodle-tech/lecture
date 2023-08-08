@@ -1,0 +1,12 @@
+{
+    "build": {},
+    "copy": {
+        "a11y": "",
+        "adaptors": "",
+        "input": "",
+        "output": "",
+        "sre": "",
+        "ui": "",
+        "mathjax3.min.js": ""
+    }
+}

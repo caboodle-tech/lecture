@@ -1,0 +1,30 @@
+/**
+ * This file was manually created for Lecture and uses Reveals white theme styles
+ * for the light mode theme and Reveals black for the dark mode theme.
+ */
+
+ @use './light.scss' as LightTheme;
+@use './dark.scss' as DarkTheme;
+
+@mixin styles() {
+    :root {
+        --r-slide-number-top: unset;
+        --r-slide-number-right: 10px;
+        --r-slide-number-bottom: 13px;
+        --r-slide-number-left: unset;
+    }
+
+    .reveal .slide-number {
+        top: var(--r-slide-number-top);
+        right: var(--r-slide-number-right);
+        bottom: var(--r-slide-number-bottom);
+        left: var(--r-slide-number-left);
+        padding: 7px 7px 5px 7px;
+    }
+
+    @include LightTheme.styles();
+
+    html.dark, html.dark-mode {
+        @include DarkTheme.styles();
+    }
+}

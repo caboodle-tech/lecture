@@ -1,0 +1,8 @@
+{
+    "build": {
+        "lecture.js": ["lecture.min.js", "Lecture"]
+    },
+    "copy": {
+        "fonts": ""
+    }
+}

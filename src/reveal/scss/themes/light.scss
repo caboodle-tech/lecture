@@ -1,0 +1,65 @@
+/**
+ * This file was manually created for Lecture combines various Reveal styles on
+ * top of the Reveal white theme found here:
+ * https://github.com/hakimel/reveal.js/blob/master/css/theme/source/white.scss
+ */
+
+@use './includes/default-variables.scss' as *;
+@use './includes/mixins.scss' as *;
+@use './includes/fonts/source-sans-pro.scss' as SourceSansPro;
+@use './includes/theme-base.scss' as ThemeBase;
+
+@mixin styles() {
+    // Override theme settings (see ../includes/default-variables.scss)
+    $backgroundColor: #fff;
+    $mainColor: #222;
+    $headingColor: #222;
+    $mainFontSize: 42px;
+    $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+    $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+    $headingTextShadow: none;
+    $headingLetterSpacing: normal;
+    $headingTextTransform: uppercase;
+    $headingFontWeight: 600;
+    $linkColor: #2a76dd;
+    $linkColorHover: lighten( $linkColor, 15% );
+    $selectionBackgroundColor: lighten( $linkColor, 25% );
+    $heading1Size: 2.5em;
+    $heading2Size: 1.6em;
+    $heading3Size: 1.3em;
+    $heading4Size: 1.0em;
+
+    :root {
+        --r-background-color: #{$backgroundColor};
+        --r-main-font: #{$mainFont};
+        --r-main-font-size: #{$mainFontSize};
+        --r-main-color: #{$mainColor};
+        --r-block-margin: #{$blockMargin};
+        --r-heading-margin: #{$headingMargin};
+        --r-heading-font: #{$headingFont};
+        --r-heading-color: #{$headingColor};
+        --r-heading-line-height: #{$headingLineHeight};
+        --r-heading-letter-spacing: #{$headingLetterSpacing};
+        --r-heading-text-transform: #{$headingTextTransform};
+        --r-heading-text-shadow: #{$headingTextShadow};
+        --r-heading-font-weight: #{$headingFontWeight};
+        --r-heading1-text-shadow: #{$heading1TextShadow};
+        --r-heading1-size: #{$heading1Size};
+        --r-heading2-size: #{$heading2Size};
+        --r-heading3-size: #{$heading3Size};
+        --r-heading4-size: #{$heading4Size};
+        --r-code-font: #{$codeFont};
+        --r-link-color: #{$linkColor};
+        --r-link-color-dark: #{darken($linkColor , 15%)};
+        --r-link-color-hover: #{$linkColorHover};
+        --r-selection-background-color: #{$selectionBackgroundColor};
+        --r-selection-color: #{$selectionColor};
+    }
+
+    @include SourceSansPro.styles();
+
+    // Change text colors against dark slide backgrounds
+    @include dark-bg-text-color(#fff);
+
+    @include ThemeBase.styles();
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katex Test</title>
+    <link rel="stylesheet" href="katex.min.css">
+    <script src="katex.min.js"></script>
+    <script>
+        console.log('Auto initializing Katex in 5 seconds...');
+        setTimeout(() => {
+            try {
+                katex.autoRender();
+                // Notify if no errors occured.
+                console.log('Programmatically everything seems good, how about visually?')
+            } catch(e) {
+                console.error('Something is definitely wrong! Did you compile katex first?')
+                console.error(e);
+            }
+        }, 5000);
+    </script>
+</head>
+<body>
+    <div class="katex-macro">\\f = #1f(#2)</div>
+    <div class="katex-math">
+    \f\relax{x} = \int_{-\infty}^\infty
+        \f\hat\xi\,e^{2 \pi i \xi x}
+        \,d\xi
+    </div>
+    <div class="katex-math">\frac{1}{2} + \frac{3}{4} = \frac{5}{4}</div>
+    <div class="katex-math">e^{i\pi} + 1 = 0</div>
+    <div class="katex-math">\int_{a}^{b} x^2 dx</div>
+</body>
+</html>

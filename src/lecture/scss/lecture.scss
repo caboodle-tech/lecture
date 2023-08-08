@@ -1,0 +1,189 @@
+@use '../../reveal/scss/reveal.scss';
+@use '../../reveal/plugins/master/master-slide.scss';
+@use '../../highlight/hljsl.min.scss';
+@use '../../katex/katex.min.scss';
+@use './layouts.scss';
+
+/**
+ * Lecture specific styles.
+ */
+
+.lecture {
+    visibility: hidden;
+
+    &.reveal {
+        visibility: visible;
+    }
+}
+
+
+kbd {
+    position: relative;
+    font-family: monospace;
+    color: #333;
+    display: inline-block;
+    margin: -5px 3px 0 3px;
+    padding: 0 8px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 2rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: -2px;
+        left: 0;
+        z-index: -1;
+        display: block;
+        background-color: #eeeeee;
+        border-radius: 3px;
+        border: 1px solid #b4b4b4;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+    }
+}
+
+:not(pre) > code {
+    position: relative;
+    font-family: courier, monospace;
+    color: #333;
+    display: inline-block;
+    margin: -5px 3px 0 3px;
+    padding: 0 6px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 2rem;
+
+    &:before {
+        content: '';
+        opacity: .7;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        background-color: #f6f6f6;
+        border-radius: 3px;
+        border: 1px solid #b4b4b4;
+    }
+}
+
+.no-border {
+    border: none;
+}
+
+table.no-border {
+    border-collapse: collapse;
+
+    th, tr, td {
+        border: none !important;
+    }
+}
+
+html.dark, html.dark-mode {
+    kbd {
+        &:before {
+            background-color: #dfdfdf;
+            box-shadow: 0px 2px 3px rgb(255 255 255 / 30%);
+        }
+    }
+
+    :not(pre) > code {
+        &:before {
+            opacity: .9;
+        }
+    }
+}
+
+/**
+ * Overwrite HLJSL styles to be more in line with Reveals.
+ */
+.inline-line-numbers { // hide-numbers
+    .hljsl-table tr td:first-child {
+        padding: 0 0.5em;
+        border-right: none;
+        background: none;
+    }
+
+    .hljsl-table tr td:last-child {
+        padding: 0 0.5em;
+    }
+
+    .hljsl-table tr:first-of-type td {
+        padding-top: 0.5em;
+    }
+
+    .hljsl-table tr:last-of-type td {
+        padding-bottom: 0.5em;
+    }
+}
+
+/**
+ * Overwrite default styles that conflict with other styles/plugins.
+ */
+
+.reveal {
+    pre.hljs {
+        min-height: initial;
+    }
+
+    pre.hljs table.hljsl-table tr td {
+        border-bottom: 0;
+    }
+
+    svg {
+        line-height: initial;
+    }
+
+    [data-controls-layout="bottom-right"].controls {
+        transform: scale(.8);
+        right: 0.5rem;
+        bottom: 3rem;
+
+        button {
+            visibility: visible;
+            opacity: 0.3;
+            cursor: pointer;
+            transform: none;
+
+            &.enabled {
+                opacity: .9;
+            }
+        }
+    }
+}
+
+html.dark, html.dark-mode {
+    .reveal {
+        [data-controls-layout="bottom-right"].controls {
+            button {
+                opacity: 0.2;
+
+                &.enabled {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+body {
+    /* Fix assistive styles for MathJax3 and tone down crazy shadow effect. */
+    .MJX_LiveRegion_Show {
+        background-color: white !important;
+        box-shadow: 0px 2px 2px #888888;
+        -webkit-box-shadow: 0px 2px 2px #888888;
+        -moz-box-shadow: 0px 2px 2px #888888;
+        -khtml-box-shadow: 0px 2px 2px #888888;
+    }
+
+    .CtxtMenu_Menu {
+        box-shadow: 0px 2px 2px #808080;
+        -webkit-box-shadow: 0px 2px 2px #808080;
+        -moz-box-shadow: 0px 2px 2px #808080;
+        -khtml-box-shadow: 0px 2px 2px #808080;
+    }
+}

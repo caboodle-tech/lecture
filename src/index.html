@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="highlight/hljsl.min.js"></script>
+    <script src="katex/katex.min.js"></script>
+    <script src="mathjax/mathjax3.min.js"></script>
+    <script src="mermaid/mermaid.min.js"></script>
+    <script src="reveal/reveal.min.js"></script>
+    <script src="lecture/lecture.min.js"></script>
+    <link rel="stylesheet" href="lecture/lecture.min.css">
+</head>
+<body>
+    <div class="lecture">
+        <div class="slides">
+            <section class="master-slide">
+                <img src="demo/assets/caboodle-tech-logo.webp" alt="Caboodle Tech Logo" title="Caboodle Tech" class="logo">
+                <img src="demo/assets/caboodle-tech-logo-dark.webp" alt="Caboodle Tech Logo" title="Caboodle Tech" class="logo dark-mode">
+                <p class="copyright">
+                    Lecture <a href="https://github.com/caboodle-tech/lecture/releases/tag/1.0.0">v1.0.0</a>
+                    <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15 5h5v5h4v8h-4v5h-20v-22h15v4zm-5 12h-8v4h8v-4zm8 0h-7v4h7v-4zm-11-5h-5v4h5v-4zm9 0h-8v4h8v-4zm6 0h-5v4h5v-4zm-11-5v4h7v-4h-7zm-1 0h-8v4h8v-4zm-3-4h-5v3h5v-3zm6 0h-5v3h5v-3z"/></svg>
+                    w/
+                    <svg class="icon heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M17.867 3.493l4.133 3.444v5.127l-10 8.333-10-8.334v-5.126l4.133-3.444 5.867 3.911 5.867-3.911zm.133-2.493l-6 4-6-4-6 5v7l12 10 12-10v-7l-6-5z"/></svg> by Caboodle Tech
+                </p>
+            </section>
+            <section>
+                <h1>Lecture</h1>
+                <h4>Powerful Web Presentations Simplified</h4>
+                <p>
+                    Press <kbd>&rarr;</kbd> to learn more or download <a href="https://github.com/caboodle-tech/lectures" target="_blank">Lecture</a> and start creating presentations in minutes!
+                </p>
+            </section>
+            <section>
+                <section>
+                    <h3>Out-of-the-box Lecture<br>comes packed with Features</h3>
+                    <p>
+                        Press <kbd>&darr;</kbd> for an overview of features.
+                    </p>
+                    <p>
+                        Press <kbd>&rarr;</kbd> for a live demo.
+                    </p>
+                </section>
+                <section class="two-col">
+                    <p>
+                        Transform simple text instructions into diagrams and charts with <a href="https://mermaid.js.org/" target="_blank">Mermaid</a>.
+                    </p>
+                    <div class="mermaid">
+                        stateDiagram-v2
+                        [*] --> Still
+                        Still --> [*]
+                        Still --> Moving
+                        Moving --> Still
+                        Moving --> Crash
+                        Crash --> [*]
+                    </div>
+                </section>
+                <section>
+                    <p>
+                        Easily display code examples with <a href="https://caboodle-tech.github.io/highlight-js-lite/" target="_blank">Highlight JS Lite</a>.
+                    </p>
+                    <pre class="show-numbers">
+                        <code class="sql">
+                            SELECT
+                                passage_name,
+                                location,
+                                destination
+                            FROM
+                                hogwarts_secret_passages
+                            WHERE
+                                destination LIKE '%Room of Requirement%';
+                        </code>
+                    </pre>
+                    <p class="fine-print">
+                        <strong>NOTE:</strong> Line numbers are disabled by default, the demo explains how to enable them.
+                    </p>
+                </section>
+                <section class="two-col">
+                    <div>
+                        <p style="transform: translate(0,-1rem);">
+                           <a href="https://katex.org/" target="_blank">KaTex</a> macros and math formulas are supported.
+                        </p>
+                        <div class="katex-macro">
+                            \prs = \pi r^3
+                            ---
+                            \sphere = \dfrac{4}{3} \prs
+                        </div>
+                        <div class="katex" style="transform: scale(0.8);">
+                            V = \sphere
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            <a href="https://www.mathjax.org/" target="_blank">MathJax3</a> math formulas are supported.
+                        </p>
+                        <div class="mathjax-3">
+                            \[V = \frac{4}{3} \pi r^3\]
+                        </div>
+                    </div>
+                </section>
+                <section data-markdown>
+                    Create individual slides or entire presentations with the [Markdown](https://www.markdownguide.org "Markdown Guide"){target="blank"} markup language.
+
+                    [![Markdown Logo](./demo/assets/md-logo.png "Markdown Guide")](https://www.markdownguide.org){target="_blank"}
+
+                    *Advanced markdown syntax is covered in the demo.*
+                </section>
+                <section class="checklist">
+                    <style>
+                        .checklist ul { display: flex; list-style: none; width: 100%; margin: 1rem 0; padding: 0; }
+                        .checklist ul li { display: inline-block; margin: 0 auto; }
+                        .checklist ul li:before { content: '✓'; font-weight: bold; }
+
+                        html.dark .checklist ul { display: flex; list-style: none; }
+                        html.dark-mode .checklist ul { display: flex; list-style: none; }
+                    </style>
+                    <h3>Media</h3>
+                    <p>
+                        All of the following media elements are supported with various advanced settings you can configure:
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://www.w3schools.com/html/html5_audio.asp" target="_blank">Audio</a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3schools.com/tags/tag_video.asp" target="_blank">Video</a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">Image</a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3schools.com/tags/tag_iframe.asp" target="_blank">Iframe</a>
+                        </li>
+                    </ul>
+                </section>
+                <section data-background-image="http://i.giphy.com/90F8aUepslB84.gif">
+                    <p>
+                        <br><br><br><br><br><br>
+                    </p>
+                    <p style="color: #ffffff; padding: 7px; font-size: calc(var(--r-main-font-size) - 7px); background: rgb(0 0 0 / 65%);">
+                        Presentation wide or slide specific background images, animated gifs, and videos are also supported!
+                    </p>
+                </section>
+                <section data-autoslide="2000">
+                    <p>
+                        And of course... <span class="fragment" data-fragment-index="1">fragments, animations, and auto advancement is supported.</span>
+                    </p>
+                    <p class="fragment" data-fragment-index="2">
+                        <span class="fragment highlight-red" data-fragment-index="2">
+                            Including combinations like highlighting text.
+                        </span>
+                    </p>
+                    <p class="fragment fade-in-then-out" data-fragment-index="3">
+                        Fading in, then out.
+                    </p>
+                    <p class="fragment fade-up" data-fragment-index="4">
+                        Sliding up while fading in to name a few.
+                    </p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Keyboard Shortcuts</h3>
+                    <p>
+                        Press <kbd>&darr;</kbd> to view important keyboard shortcuts.
+                    </p>
+                    <p>
+                       Press <kbd>Shift</kbd> + <kbd>?</kbd> to view all shortcuts at once.
+                    </p>
+                </section>
+                <section>
+                    <h4>Themes and Views</h4>
+                    <table class="no-border">
+                        <tr>
+                            <td>
+                                <kbd>S</kbd>
+                            </td>
+                            <td>
+                                Open speaker view
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <kbd>F</kbd>
+                            </td>
+                            <td>
+                                Enter fullscreen view
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <kbd>D</kbd> / <kbd>L</kbd>
+                            </td>
+                            <td>
+                                Enable dark / light theme
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <kbd>B</kbd> or <kbd>.</kbd>
+                            </td>
+                            <td>
+                                Blackout view
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <kbd>Shift</kbd> + <kbd>P</kbd>
+                            </td>
+                            <td>
+                                Open print view
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h4>Fast Navigation</h4>
+                    <p>
+                        Press <kbd>O</kbd> or <kbd>Esc</kbd> to bring up the presentation overview. Using your arrow keys you can navigate to the slide you want and press <kbd>Space</kbd> to select it.
+                    </p>
+                </section>
+                <section>
+                    <h4>Fast Navigation with Preview</h4>
+                    <p>
+                        Press <kbd>G</kbd> to enter a slide number to preview then <kbd>Enter</kbd> to jump to your selection or <kbd>Esc</kbd> to cancel.
+                    </p>
+                    <p>
+                        You can also jump to a child slide with the pattern <code>#/#</code>. Entering <code>2/3</code> would be slide 2 child 3. 
+                    </p>
+                </section>
+                <section>
+                    <h4>Traditional Navigation</h4>
+                    <table class="no-border">
+                        <tr>
+                            <td>
+                                <kbd>&larr;</kbd> or <kbd>H</kbd>
+                            </td>
+                            <td>
+                                Navigate left
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <kbd>&rarr;</kbd> or <kbd>L</kbd>
+                            </td>
+                            <td>
+                                Navigate right
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <kbd>&uarr;</kbd> or <kbd>K</kbd>
+                            </td>
+                            <td>
+                                Navigate up
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <kbd>&darr;</kbd> or <kbd>J</kbd>
+                            </td>
+                            <td>
+                                Navigate down
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h4>Advanced Navigation</h4>
+                    <table class="no-border">
+                        <tr>
+                            <td>
+                                <kbd>N</kbd> or <kbd>Space</kbd>
+                            </td>
+                            <td>
+                                Go forward
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <kbd>P</kbd> or <kbd>Shift</kbd> + <kbd>Space</kbd>
+                            </td>
+                            <td>
+                                Go backward
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <kbd>Alt</kbd> + <kbd>&larr;</kbd> / <kbd>&rarr;</kbd> / <kbd>&uarr;</kbd> / <kbd>&darr;</kbd>
+                            </td>
+                            <td>
+                                Skip fragments + navigate
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <kbd>Shift</kbd> + <kbd>&larr;</kbd> or <kbd>&rarr;</kbd>
+                            </td>
+                            <td>
+                                Jump to first or last slide
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Creating Presentations</h3>
+                    <p>
+                        Presentations are built with standard <a href="https://www.w3schools.com/html/" target="_blank">html</a> and are split into slides (<code>&lt;section&gt;</code>).
+                    </p>
+                    <p>
+                        Press <kbd>&darr;</kbd> for a crash course in building your first presentation.
+                    </p>
+                </section>
+                <section>
+                    <h4>Parent Container</h4>
+                    <p>
+                        All presentations should be wrapped in two <code>&lt;div&gt;</code> elements with the appropriate classes:
+                    </p>
+                    <pre>
+                        <code class="html">
+                            &lt;div class=&quot;lecture&quot;&gt;
+                                &lt;div class=&quot;slides&quot;&gt;
+                                    &lt;!-- Your slides go here. --&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h4>Adding Slides</h4>
+                    <p>
+                        Separate slides are created by wrapping individual slide content in <code>&lt;section&gt;</code> elements:
+                    </p>
+                    <pre>
+                        <code class="html">
+                            &lt;section&gt;
+                                &lt;h1&gt;Slide 1&lt;/h1&gt;
+                                &lt;p&gt;A paragraph in slide 1.&lt;/p&gt;
+                            &lt;/section&gt;
+                            &lt;section&gt;
+                                &lt;h1&gt;Slide 2&lt;/h1&gt;
+                                &lt;p&gt;A paragraph in slide 2.&lt;/p&gt;
+                            &lt;/section&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h4>Vertical Slides</h4>
+                    <p>
+                        To create vertical slide sections like what you are viewing now, wrap your slides in a <code>&lt;section&gt;</code> element:
+                    </p>
+                    <pre>
+                        <code class="html">
+                            &lt;section&gt;
+                                &lt;section&gt;
+                                    &lt;h1&gt;Child 1&lt;/h1&gt;
+                                    &lt;p&gt;A paragraph in child 1.&lt;/p&gt;
+                                &lt;/section&gt;
+                                &lt;section&gt;
+                                    &lt;h1&gt;Child 2&lt;/h1&gt;
+                                    &lt;p&gt;A paragraph in child 2.&lt;/p&gt;
+                                &lt;/section&gt;
+                            &lt;/section&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section data-background="#fff0b0">
+                    <h4>Background Color and Images</h4>
+                    <p>
+                        Setting various attributes on the slide or presentations <code>&lt;section&gt;</code> element allows you to add all kinds of backgrounds.
+                    </p>
+                    <p>
+                        Refer to the <a href="https://revealjs.com/demo/#/15" target="_blank">Reveal demo</a> for more information.
+                    </p>
+                </section>
+                <section class="left">
+                    <h4>Modify Slide Content</h4>
+                    <p>
+                        Use one of these classes on the <code>&lt;section&gt;</code> tag to alter the slides content:
+                    </p>
+                    <table class="no-border">
+                        <tr>
+                            <td>
+                                left
+                            </td>
+                            <td>
+                                Left align content
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                center
+                            </td>
+                            <td>
+                                Center align content (default)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                right
+                            </td>
+                            <td>
+                                Right align content
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="left">
+                    <h4>Modify Slide Elements</h4>
+                    <p>
+                        Add these classes to the element you would like to alter or add globally to <code>&lt;div class="slides"&gt;</code>:
+                    </p>
+                    <table class="no-border r-fit-text">
+                        <tr>
+                            <td>
+                                r-fit-text
+                            </td>
+                            <td>
+                                Auto fit text
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                hide-numbers
+                            </td>
+                            <td>
+                                Hides line numbers in code samples
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                show-numbers
+                            </td>
+                            <td>
+                                Shows line numbers in code samples
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                inline-line-numbers
+                            </td>
+                            <td>
+                                Simplify code sample line numbers
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="left">
+                    <h4>Modify Slide Layout</h4>
+                    <p>
+                        Use one of these classes on the <code>&lt;section&gt;</code> tag to alter the slides layout:
+                    </p>
+                    <table class="no-border">
+                        <tr>
+                            <td>
+                                two-col
+                            </td>
+                            <td>
+                                2 column layout
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                three-col
+                            </td>
+                            <td>
+                                3 column layout
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                two-col-with-title
+                            </td>
+                            <td>
+                                2 columns with a title
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                three-col-with-title
+                            </td>
+                            <td>
+                                3 column with a title
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="left">
+                    <h3>Other Modifications</h3>
+                    <p>
+                        To disable the row border in tables add the <code>no-border</code> class to the <code>&lt;table&gt;</code> tag.
+                    </p>
+                    <p>
+                        You may add the <code>left</code> or <code>right</code> class to the <code>&lt;div class="slides"&gt;</code> element to overwrite the default style of centered content for the whole presentation.
+                    </p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Charts and Diagram</h3>
+                    <p>
+                        You can add various charts and diagrams using the <a href="https://mermaid.js.org/intro/" target="_blank">Mermaid syntax</a>.
+                    </p>
+                    <p>
+                       Press <kbd>&darr;</kbd> for a crash course in adding Mermaid charts and diagrams to your presentations.
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        All charts and diagrams should be wrapped in a <code>div</code> element with the <code>mermaid</code>class: 
+                    </p>
+                    <pre>
+                        <code>
+                            &lt;div class="mermaid"&gt;
+                                graph LR;
+                                    A[Start] --&gt; B[Process 1];
+                                    B --&gt; C[Process 2];
+                                    C --&gt; D[Process 3];
+                                    D --&gt; E[End];
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <p>
+                        The previous code sample would create this graph:
+                    </p>
+                    <div class="mermaid">
+                        graph LR;
+                            A[Start] --> B[Process 1];
+                            B --> C[Process 2];
+                            C --&gt; D[Process 3];
+                            D --&gt; E[End];
+                    </div>
+                    <p>
+                        But there are so many other diagrams.
+                        <br>
+                        Take a <kbd>&darr;</kbd> look!
+                    </p>
+                </section>
+                <section class="two-col-with-title">
+                    <p>If fact you can create anyone of these:</p>
+                    <ul>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/flowchart.html" target="_blank">Flowchart</a>
+                        </li>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/sequenceDiagram.html" target="_blank">Sequence diagram</a> 
+                        </li>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/gantt.html" target="_blank">Gantt diagram</a>
+                        </li>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/pie.html" target="_blank">Pie chart</a>
+                        </li>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/classDiagram.html" target="_blank">Class diagram</a>
+                        </li>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/stateDiagram.html" target="_blank">State diagram</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/mindmap.html" target="_blank">Mindmaps</a>
+                        </li>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/timeline.html" target="_blank">Timeline diagram</a>
+                        </li>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/requirementDiagram.html" target="_blank">Requirement diagram</a>
+                        </li>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/userJourney.html" target="_blank">Journey diagram</a>
+                        </li>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/quadrantChart.html" target="_blank">Quadrant chart</a>
+                        </li>
+                        <li>
+                            <a href="https://mermaid.js.org/syntax/entityRelationshipDiagram.html" target="_blank">Entity relationship</a>
+                        </li>
+                    </ul>
+                    <p style="grid-column: 1/3;">
+                        And many more not listed here!
+                    </p>
+                </section>
+                <section>
+                    <div class="mermaid">
+                        sequenceDiagram
+                            participant User
+                            participant LectureApp
+                            participant OnlinePresentation
+
+                            User->>LectureApp: Open Online Presentation (Demo)
+                            Note right of User: User accesses the online demo made with Lecture
+                            
+                            User->>OnlinePresentation: Read How-to Guide
+                            Note right of User: User learns how to use Lecture
+                            
+                            User->>LectureApp: Create New Lecture
+                            Note right of User: User starts creating presentations with Lecture
+                            
+                            User->>LectureApp: Obtain Enlightenment
+                            Note right of User: User is happy they found Lecture
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Showing Code Samples</h3>
+                    <p>
+                        Adding code to your presentation is a simple process with a few <strong>important rules</strong>.
+                    </p>
+                    <p>
+                       Press <kbd>&darr;</kbd> for a crash course in adding code samples to your presentations.
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Code samples should be wrapped with <code>&lt;pre&gt;&lt;code&gt;</code> elements with any <code>&lt;</code> and <code>&gt;</code> characters converted to their HTML entities <code>&amp;lt;</code> and <code>&amp;gt;</code>.
+                    </p>
+                    <p>
+                        It is highly recommended to include the code samples language code as a class in the <code>&lt;code&gt;</code> element. Check out the example <kbd>&darr;</kbd> for a visual.
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Notice the pattern <code>&lt;pre&gt;&lt;code class="?"&gt;</code> where you replace <code>?</code> with the language code:
+                    </p>
+                    <pre>
+                        <code class="html">
+                            &lt;pre&gt;
+                                &lt;code class="js"&gt;
+                                    // This is a javascript example
+                                    const happy = true;
+                                    const sad   = false;
+                                &lt;/code&gt;
+                            &lt;/pre&gt;
+                        </code>
+                    </pre>
+                    <p class="fine-print">
+                        <strong>NOTE:</strong> Color highlight is off in this demo because of how we have to write the demo code for you. Proper syntax highlight will appear in your presentations.
+                    </p>
+                </section>
+                <section class="left">
+                    <h4>Line Numbers</h4>
+                    <p>
+                        Line numbers are enabled by default. To disable line numbers add the <code>hide-numbers</code> class to the <code>&lt;pre&gt;</code> element like so: <code>&lt;pre class="hide-numbers"&gt;</code>
+                    </p>
+                    <p>
+                        You can also add the class <code>inline-line-numbers</code> to simplify the line number styles. These classes can also be added globally to change all code samples.
+                    </p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Math</h3>
+                    <p>
+                        Lecture supports KaTeX and MathJax3 math. You can use both together in the same presentation.
+                    </p>
+                    <p>
+                        Press <kbd>&darr;</kbd> for a crash course in adding math examples to your presentations.
+                     </p>
+                </section>
+                <section>
+                    <p>
+                        KaTeX and MathJax3 math should be placed inside a <code>&lt;div&gt;</code> element with the appropriate class added:
+                    </p>
+                    <pre>
+                        <code>
+                            &lt;!-- Katex example: --&gt;
+                            &lt;div class="katex"&gt;
+                                Add KaTeX math here...
+                            &lt;/div&gt;
+
+                            &lt;!-- MathJax example: --&gt;
+                            &lt;div class="mathjax-3"&gt;
+                                Add MathJax math here...
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section class="left">
+                    <h4>Katex Macros</h4>
+                    <p>
+                        If you would like to add a macro to Katex, declare the macro in a <code>&lt;div&gt;</code> element with the <code>katex-macro</code> class.
+                    </p>
+                    <p>
+                        The new macro is declared as: <code>[\name] = [macro]</code>
+                    </p>
+                    <p>
+                        To declare more than one macro at a time, place <code>---</code> on its own line in-between each macro definition.
+                    </p>
+                </section>
+                <section>
+                    <h4>Katex Macros</h4>
+                    <p>
+                        Here is how to declare two katex macros at once:
+                    </p>
+                    <pre>
+                        <code class="html">
+                            &lt;div class="katex-macro"&gt;
+                                \prs = \pi r^3
+                                ---
+                                \sphere = \dfrac{4}{3} \prs
+                            &lt;/div&gt;
+                            &lt;!-- And then use these macros: --&gt;
+                            &lt;div class="katex"&gt;
+                                V = \sphere
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                    <p class="fine-print">
+                        <strong>NOTE:</strong> The math was intentionally made harder to demo using macros.
+                    </p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Markdown</h3>
+                    <p>
+                        You can build slides or an entire presentation with standard markdown. Lecture also supports some advanced markdown syntax.
+                    </p>
+                    <p>
+                       Press <kbd>&darr;</kbd> for a crash course in adding markdown to your presentations.
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        To declare a slides content as markdown add the <code>data-markdown</code> attribute to the <code>&lt;section&gt;</code> element:
+                    </p>
+                    <pre>
+                        <code class="html">
+                            &lt;section data-markdown&gt;
+                                ## Heading
+
+                                A paragraph with a [link](https://example.com).
+                            &lt;/section&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <p class="left">
+                        To make an entire presentation out of markdown use only one <code>&lt;section&gt;</code> element and <code>---</code>, markdowns horizontal rule, to separate slides:
+                    </p>
+                    <pre>
+                        <code class="html">
+                            &lt;section data-markdown&gt;
+                                ## Slide 1
+                                A paragraph with a [link](https://hakim.se).
+                                ---
+                                ## Slide 2
+                                ---
+                                ## Slide 3
+                            &lt;/section&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section class="left">
+                    <h4>Advanced Syntax</h4>
+                    <p>
+                        Lecture implements the standard <a href="https://commonmark.org/help/" target="_blank">common mark</a> markdown syntax in addition to some <a href="https://github.github.com/gfm/" target="_blank">GitHub Flavored</a> markdown.
+                    </p>
+                    <p>
+                        Lecture uses special markdown syntax <kbd>&darr;</kbd> to add attribute support for images and links.
+                    </p>
+                </section>
+                <section class="left">
+                    <h4>Advanced Syntax</h4>
+                    <p>
+                        You can add any attribute to an image or link in markdown by adding the attributes in <code>{...}</code> after the standard image or link syntax:
+                    </p>
+                    <pre>
+                        <code class="md">
+                            &lt;!-- Link that opens in a new tab instead. --&gt;
+                            [Link Text](URL){target="_blank"}
+
+                            &lt;!-- Image with a constrained width --&gt;
+                            ![Alt Text](URL){width="100"}
+                        </code>
+                    </pre>
+                </section>
+                <section class="left">
+                    <h4>Advanced Syntax</h4>
+                    <p>
+                        You can add as many attributes you like just separate them with a space: <code>{target="blank" rel="nofollow"}</code>
+                    </p>
+                    <p>
+                        Your can also place images with attributes inside links:
+                    </p>
+                    <pre>
+                        <code class="md">
+                            &lt;!-- An image being used as a link with attributes. --&gt;
+                            [![Alt Text](URL){width="100"}](URL){target="_blank"}
+                        </code>
+                    </pre>
+                </section>
+            </section>
+            <section class="checklist">
+                <style>
+                    .checklist ul { display: flex; list-style: none; width: 100%; margin: 1rem 0; padding: 0; }
+                    .checklist ul li { display: inline-block; margin: 0 auto; }
+                    .checklist ul li:before { content: '✓'; font-weight: bold; }
+
+                    html.dark .checklist ul { display: flex; list-style: none; }
+                    html.dark-mode .checklist ul { display: flex; list-style: none; }
+                </style>
+                <h3>Media</h3>
+                <p>
+                    Use standard HTML for the following media elements:
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://www.w3schools.com/html/html5_audio.asp" target="_blank">Audio</a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/tags/tag_video.asp" target="_blank">Video</a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">Image</a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/tags/tag_iframe.asp" target="_blank">Iframe</a>
+                    </li>
+                </ul>
+                <p>The <a href="https://revealjs.com/media/" target="_blank">Reveal documentation</a> explains advanced features and settings for these elements.</p>
+            </section>
+            <section>
+                <h3>Fragments and Animations</h3>
+                <p>
+                    Text <a href="https://revealjs.com/fragments/" target="_blank">fragments</a> and slide <a href="https://revealjs.com/transitions/" target="_blank">transitions</a> require adding the appropriate classes and/or attributes to elements.
+                </p>
+                <p>
+                    Click on the above links to be taken to the Reveal documentation for these features.
+                </p>
+            </section>
+            <section>
+                <h2>🏁 Finished 🏁</h2>
+                <p>
+                    Download <a href="https://github.com/caboodle-tech/lectures" target="_blank">Lecture</a> and start creating your own presentations in minutes!
+                </p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -2,23 +2,26 @@
     "bin": {
         "lecture": "bin/lecture.js"
     },
+    "scripts": {
+        "build": "node bin/build.js"
+    },
     "devDependencies": {
+        "@babel/core": "^7.22.9",
+        "@babel/preset-env": "^7.22.9",
         "@rollup/plugin-babel": "^6.0.3",
-        "@rollup/plugin-commonjs": "^24.1.0",
-        "@rollup/plugin-terser": "^0.4.1",
-        "eslint": "^8.22.0",
+        "@rollup/plugin-terser": "^0.4.3",
+        "archiver": "^5.3.1",
+        "eslint": "^8.45.0",
         "eslint-config-airbnb-base": "^15.0.0",
-        "eslint-plugin-import": "^2.26.0",
-        "magic-string": "^0.30.0",
-        "mathjax-full": "^3.2.2",
-        "mermaid": "^10.1.0",
-        "rollup": "^3.20.2",
-        "sass": "^1.62.0"
+        "eslint-plugin-import": "^2.27.5",
+        "rollup": "^3.26.3",
+        "sass": "^1.63.6"
     },
     "dependencies": {
         "htmlparser2": "^8.0.2",
         "node-html-parser": "^6.1.5"
     },
+    "type": "module",
     "main": "./bin/lectures.js",
     "man": "bin/man/lecture.1"
 }

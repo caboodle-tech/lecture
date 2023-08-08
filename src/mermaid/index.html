@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid Test</title>
+    <script src="mermaid.min.js"></script>
+    <script>
+        console.log('Auto initializing Mermaid in 5 seconds...');
+        setTimeout(() => {
+            try {
+                mermaid.init();
+                console.log('Programmatically everything seems good, how about visually?')
+            } catch(e) {
+                console.error('Something is definitely wrong! Did you compile mermaid first?')
+                console.error(e);
+            }
+        }, 5000);
+    </script>
+</head>
+<body>
+    <h1>Flowchart Diagram</h1>
+    <div class="mermaid">
+        flowchart LR
+        A[Hard] -->|Text| B(Round)
+        B --> C{Decision}
+        C -->|One| D[Result 1]
+        C -->|Two| E[Result 2]
+    </div>
+    <h1>Graph Diagram</h1>
+    <div class="mermaid">
+        graph TD;
+          A-->B;
+          A-->C;
+          B-->D;
+          C-->D;
+    </div>
+    <h1>Sequence Diagram</h1>
+    <div class="mermaid">
+        sequenceDiagram
+            Alice->>John: Hello John, how are you?
+            loop Healthcheck
+                John->>John: Fight against hypochondria
+            end
+            Note right of John: Rational thoughts!
+            John-->>Alice: Great!
+            John->>Bob: How about you?
+            Bob-->>John: Jolly good!
+      </div>
+    <h1>Class Diagram</h1>
+    <div class="mermaid">
+        classDiagram
+            class Animal {
+                -name: string
+                +getName(): string
+                +setName(name: string): void
+            }
+
+            class Dog {
+                +bark(): void
+            }
+
+            class Cat {
+                +meow(): void
+            }
+
+            class Person {
+                -name: string
+                -age: number
+                +getName(): string
+                +setName(name: string): void
+                +getAge(): number
+                +setAge(age: number): void
+            }
+
+            Animal <|-- Dog
+            Animal <|-- Cat
+            Person o-- Animal
+      </div>
+    <h1>Gantt Diagram</h1>
+    <div class="mermaid">
+        gantt
+          dateFormat  YYYY-MM-DD
+          title A Simple Gantt Diagram
+    
+          section Tasks
+          Task 1 :a1, 2023-07-01, 5d
+          Task 2 :after a1 , 5d
+          Task 3 : 12d
+      </div>
+    <h1>Journey Diagram</h1>
+    <div class="mermaid">
+        journey
+            title My working day
+            section Go to work
+                Make tea: 5: Me
+                Go upstairs: 3: Me
+                Do work: 1: Me, Cat
+            section Go home
+                Go downstairs: 5: Me
+                Sit down: 3: Me
+      </div>
+    <h1>C4 Diagram</h1>
+    <div class="mermaid">
+        C4Context
+        title System Context diagram for Internet Banking System
+
+        Person(customerA, "Banking Customer A", "A customer of the bank, with personal bank accounts.")
+        Person(customerB, "Banking Customer B")
+        Person_Ext(customerC, "Banking Customer C")
+        System(SystemAA, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
+
+        Person(customerD, "Banking Customer D", "A customer of the bank, <br/> with personal bank accounts.")
+
+        Enterprise_Boundary(b1, "BankBoundary") {
+
+        SystemDb_Ext(SystemE, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+
+        System_Boundary(b2, "BankBoundary2") {
+            System(SystemA, "Banking System A")
+            System(SystemB, "Banking System B", "A system of the bank, with personal bank accounts.")
+        }
+
+        System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
+        SystemDb(SystemD, "Banking System D Database", "A system of the bank, with personal bank accounts.")
+
+        Boundary(b3, "BankBoundary3", "boundary") {
+            SystemQueue(SystemF, "Banking System F Queue", "A system of the bank, with personal bank accounts.")
+            SystemQueue_Ext(SystemG, "Banking System G Queue", "A system of the bank, with personal bank accounts.")
+        }
+        }
+
+        BiRel(customerA, SystemAA, "Uses")
+        BiRel(SystemAA, SystemE, "Uses")
+        Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
+        Rel(SystemC, customerA, "Sends e-mails to")
+      </div>
+</body>
+</html>

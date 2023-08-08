@@ -1,0 +1,7 @@
+{
+    "build": {},
+    "copy": {
+        "reveal.min.js": "",
+        "reveal.min.js.map": ""
+    }
+}

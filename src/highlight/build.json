@@ -1,0 +1,10 @@
+{
+    "build": {},
+    "copy": {
+        "highlight.min.js": "",
+        "hljsl-worker.min.js": "",
+        "hljsl-worker.min.js.map": "",
+        "hljsl.min.js": "",
+        "hljsl.min.js.map": ""
+    }
+}

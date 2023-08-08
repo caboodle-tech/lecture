@@ -1,0 +1,8 @@
+{
+    "build": {
+        "katex.js": ["katex.min.js", "katex"]
+    },
+    "copy": {
+        "fonts": "../lecture"
+    }
+}

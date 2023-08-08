@@ -1,0 +1,6 @@
+{
+    "build": {
+        "lecture.scss": ["../lecture.min.css"]
+    },
+    "copy": {}
+}
