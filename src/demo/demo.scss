@@ -1,0 +1,24 @@
+@mixin styles() {
+    .reveal {
+        .backgrounds, .pdf-page {
+            .slide-background-content {
+                .background {
+                    background-color: #e9ded0;
+                }
+            }
+        }
+    }
+
+
+    html.dark, html.dark-mode {
+        .reveal {
+            .backgrounds, .pdf-page {
+                .slide-background-content {
+                    .background {
+                        background-color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}

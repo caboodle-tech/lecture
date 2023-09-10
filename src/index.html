@@ -12,7 +12,7 @@
 <body>
     <div class="lecture">
         <div class="slides">
-            <section class="master-slide">
+            <section class="slide-template">
                 <img src="demo/assets/caboodle-tech-logo.webp" alt="Caboodle Tech Logo" title="Caboodle Tech" class="logo">
                 <img src="demo/assets/caboodle-tech-logo-dark.webp" alt="Caboodle Tech Logo" title="Caboodle Tech" class="logo dark-mode">
                 <p class="copyright">
@@ -21,6 +21,15 @@
                     w/
                     <svg class="icon heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M17.867 3.493l4.133 3.444v5.127l-10 8.333-10-8.334v-5.126l4.133-3.444 5.867 3.911 5.867-3.911zm.133-2.493l-6 4-6-4-6 5v7l12 10 12-10v-7l-6-5z"/></svg> by Caboodle Tech
                 </p>
+            </section>
+            <section class="slide-template" data-template="demo-alt-template">
+                <p class="copyright">
+                    Lecture <a href="https://github.com/caboodle-tech/lecture/releases/tag/1.0.0">v1.0.0</a>
+                    <svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15 5h5v5h4v8h-4v5h-20v-22h15v4zm-5 12h-8v4h8v-4zm8 0h-7v4h7v-4zm-11-5h-5v4h5v-4zm9 0h-8v4h8v-4zm6 0h-5v4h5v-4zm-11-5v4h7v-4h-7zm-1 0h-8v4h8v-4zm-3-4h-5v3h5v-3zm6 0h-5v3h5v-3z"/></svg>
+                    w/
+                    <svg class="icon heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M17.867 3.493l4.133 3.444v5.127l-10 8.333-10-8.334v-5.126l4.133-3.444 5.867 3.911 5.867-3.911zm.133-2.493l-6 4-6-4-6 5v7l12 10 12-10v-7l-6-5z"/></svg> by Caboodle Tech
+                </p>
+                <div class="background"></div>
             </section>
             <section>
                 <h1>Lecture</h1>
@@ -490,6 +499,82 @@
                     <p>
                         You may add the <code>left</code> or <code>right</code> class to the <code>&lt;div class="slides"&gt;</code> element to overwrite the default style of centered content for the whole presentation.
                     </p>
+                </section>
+            </section>
+            <section data-template="demo-alt-template">
+                <section>
+                    <h3>Slide Templates</h3>
+                    <p>
+                        Did you notice a change? You can create multiple slide templates that automatically apply styles, logos, backgrounds, copyrights, and so on to slides.
+                    </p>
+                    <p>
+                       Press <kbd>&darr;</kbd> to learn how to add your own slide templates.
+                    </p>
+                </section>
+                <section class="left">
+                    <p>
+                        To add a slide template to your presentation add the <code>slide-template</code> class to a <code>&lt;section&gt;</code>:
+                    </p>
+                    <pre>
+                        <code>
+                            &lt;section class=&quot;slide-template&quot;&gt;
+                                &lt;img src=&quot;...&quot; class=&quot;logo&quot;&gt;
+                                &lt;img src=&quot;...&quot; class=&quot;logo dark-mode&quot;&gt;
+                                &lt;p class=&quot;copyright&quot;&gt;...&lt;/p&gt;
+                                &lt;div class=&quot;background&quot;&gt;&lt;/div&gt;
+                            &lt;/section&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <p>
+                        Anything placed in a slide template will be placed into the background of slides.
+                    </p>
+                    <p>
+                        The first slide template on the page will be treated as the default template for all slides.
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Naming templates allows you to use different slide templates throughout your presentation by adding the <code>data-template</code> attribute to the slide template:
+                    </p>
+                    <pre>
+                        <code>
+                            &lt;section class=&quot;slide-template&quot; data-template=&quot;demo-alt&quot;&gt;
+                                &lt;!-- slide template --&gt;
+                            &lt;/section&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <p>
+                        To apply this template to a slide add the <code>data-template</code> attribute with the same name to your slides <code>&lt;section&gt;</code> element(s):
+                    </p>
+                    <pre>
+                        <code>
+                            &lt;section data-template=&quot;demo-alt&quot;&gt;
+                                &lt;!-- slide --&gt;
+                            &lt;/section&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <p>
+                        If you apply a template to the parent of a vertical section of slides each slide will inherit that template and ignore any individually set templates; that is what is being done for this demo section.
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        Lecture includes generic styles and css variables for the following elements and classes in slide templates. You should be able to affect a lot without having to add additional HTML or styles of your own.
+                    </p>
+                    <pre>
+                        <code>
+                            &lt;img src=&quot;...&quot; class=&quot;logo&quot;&gt;
+                            &lt;img src=&quot;...&quot; class=&quot;logo dark-mode&quot;&gt;
+                            &lt;p class=&quot;copyright&quot;&gt;...&lt;/p&gt;
+                            &lt;div class=&quot;background&quot;&gt;&lt;/div&gt;
+                        </code>
+                    </pre>
                 </section>
             </section>
             <section>

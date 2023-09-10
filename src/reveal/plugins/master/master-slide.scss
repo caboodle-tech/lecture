@@ -1,6 +1,7 @@
 /**
  * Styles for Lecture's master slide plugin for Reveal.
  */
+@use '../../../demo/demo.scss' as Demo;
 
 :root {
     --master-slide-logo-height: 5rem;
@@ -31,6 +32,10 @@ html.dark, html.dark-mode {
     }
     
     .backgrounds, .pdf-page {
+        .slide-background.stack > .slide-background-content {
+            display: none;
+        }
+
         .slide-background-content {
             position: absolute;
             width: 100%;
@@ -86,6 +91,13 @@ html.dark, html.dark-mode {
                     fill: var(--master-slide-copyright-color);
                 }
             }
+
+            .background {
+                position: relative;
+                display: block;
+                height: 100%;
+                z-index: -1;
+            }
         }
     }
 }
@@ -101,3 +113,5 @@ html.dark, html.dark-mode {
         }
     }
 }
+
+@include Demo.styles();
