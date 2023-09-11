@@ -85,12 +85,19 @@ function MasterSlide() {
             if (master.dataset.template) {
                 masterSlides[master.dataset.template] = master.innerHTML;
             // eslint-disable-next-line no-underscore-dangle
-            } else if (!masterSlides.__default) {
+            } else if (!masterSlides.__default) { // First template without a name.
                 // eslint-disable-next-line no-underscore-dangle
                 masterSlides.__default = master.innerHTML;
             }
             master.remove();
         });
+
+        // Double check that we assigned a default template.
+        // eslint-disable-next-line no-underscore-dangle
+        if (!masterSlides.__default) {
+            // eslint-disable-next-line no-underscore-dangle
+            masterSlides.__default = masters[0].innerHTML;
+        }
 
         // Create a new MutationObserver that waits until Reveal builds the slide backgrounds.
         const observer = new MutationObserver((mutationsList) => {

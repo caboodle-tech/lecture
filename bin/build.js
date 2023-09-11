@@ -186,6 +186,7 @@ class Builder {
                     file: outputFile,
                     format: 'iife',
                     name: outputName,
+                    footer: `window.${outputName} = ${outputName}`,
                     plugins: [Terser()],
                     sourcemap: true
                 };

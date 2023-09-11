@@ -7,41 +7,6 @@ let zoom = {
     zoomLevel: () => {}
 };
 
-(function () {
-    // Switch the fake zoom instance out with the real instance.
-    function onDocumentBodyStyleAvailable() {
-        zoom = realZoom();
-    }
-
-    // Check if document.body.style exists
-    if (document.body?.style) {
-        onDocumentBodyStyleAvailable();
-    } else {
-        // If it doesn't exist, set up a MutationObserver to wait for changes
-        const observeBody = new MutationObserver((mutationsList, observer) => {
-            const mutationsLength = mutationsList.length;
-            for (let i = 0; i < mutationsLength; i++) {
-                const mutation = mutationsList[i];
-                if (mutation.type === 'childList') {
-                    const addedNodesLength = mutation.addedNodes.length;
-                    for (let j = 0; j < addedNodesLength; j++) {
-                        const node = mutation.addedNodes[j];
-                        if (node.nodeName === 'BODY') {
-                            // <body> element is now available
-                            onDocumentBodyStyleAvailable(observer);
-                            observer.disconnect();
-                            return;
-                        }
-                    }
-                }
-            }
-        });
-
-        // Start observing the document.body for changes to attributes
-        observeBody.observe(document, { childList: true, subtree: true });
-    }
-}());
-
 /*!
  * zoom.js 0.3 (modified for use with reveal.js)
  * http://lab.hakim.se/zoom-js
@@ -264,6 +229,42 @@ const realZoom = function () {
     };
 
 };
+
+
+(function () {
+    // Switch the fake zoom instance out with the real instance.
+    function onDocumentBodyStyleAvailable() {
+        zoom = realZoom();
+    }
+
+    // Check if document.body.style exists
+    if (document.body?.style) {
+        onDocumentBodyStyleAvailable();
+    } else {
+        // If it doesn't exist, set up a MutationObserver to wait for changes
+        const observeBody = new MutationObserver((mutationsList, observer) => {
+            const mutationsLength = mutationsList.length;
+            for (let i = 0; i < mutationsLength; i++) {
+                const mutation = mutationsList[i];
+                if (mutation.type === 'childList') {
+                    const addedNodesLength = mutation.addedNodes.length;
+                    for (let j = 0; j < addedNodesLength; j++) {
+                        const node = mutation.addedNodes[j];
+                        if (node.nodeName === 'BODY') {
+                            // <body> element is now available
+                            onDocumentBodyStyleAvailable(observer);
+                            observer.disconnect();
+                            return;
+                        }
+                    }
+                }
+            }
+        });
+
+        // Start observing the document.body for changes to attributes
+        observeBody.observe(document, { childList: true, subtree: true });
+    }
+}());
 
 /*!
  * reveal.js Zoom plugin

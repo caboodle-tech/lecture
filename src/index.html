@@ -505,15 +505,16 @@
                 <section>
                     <h3>Slide Templates</h3>
                     <p>
-                        Did you notice a change? You can create multiple slide templates that automatically apply styles, logos, backgrounds, copyrights, and so on to slides.
+                        Notice a change? Slide templates can automatically apply styles, logos, backgrounds, copyrights, and more to slides.
                     </p>
                     <p>
                        Press <kbd>&darr;</kbd> to learn how to add your own slide templates.
                     </p>
                 </section>
-                <section class="left">
+                <section>
+                    <h4>Creating a New Template</h4>
                     <p>
-                        To add a slide template to your presentation add the <code>slide-template</code> class to a <code>&lt;section&gt;</code>:
+                        To create a new slide template add the <code>slide-template</code> class to a <code>&lt;section&gt;</code>:
                     </p>
                     <pre>
                         <code>
@@ -527,16 +528,26 @@
                     </pre>
                 </section>
                 <section>
+                    <h4>Creating a New Template</h4>
                     <p>
-                        Anything placed in a slide template will be placed into the background of slides.
+                        Keep the following in mind when creating a template:
                     </p>
-                    <p>
-                        The first slide template on the page will be treated as the default template for all slides.
-                    </p>
+                    <ul>
+                        <li>
+                            The first slide template will be treated as the default template for all slides.
+                        </li>
+                        <li>
+                            Anything in a slide template will be placed into the background of slides.
+                        </li>
+                        <li>
+                            Slide templates should not be nested in other <code>&lt;section&gt;</code> elements.
+                        </li>
+                    </ul>
                 </section>
                 <section>
+                    <h4>Template Names</h4>
                     <p>
-                        Naming templates allows you to use different slide templates throughout your presentation by adding the <code>data-template</code> attribute to the slide template:
+                        Name templates by adding the <code>data-template</code> attribute to a templates element:
                     </p>
                     <pre>
                         <code>
@@ -547,8 +558,9 @@
                     </pre>
                 </section>
                 <section>
+                    <h4>Applying a Template</h4>
                     <p>
-                        To apply this template to a slide add the <code>data-template</code> attribute with the same name to your slides <code>&lt;section&gt;</code> element(s):
+                        Apply a specific template to a slide by adding the <code>data-template</code> attribute and the name to your slide(s) <code>&lt;section&gt;</code> element(s):
                     </p>
                     <pre>
                         <code>
@@ -559,13 +571,26 @@
                     </pre>
                 </section>
                 <section>
+                    <h4>Inherited Templates</h4>
                     <p>
-                        If you apply a template to the parent of a vertical section of slides each slide will inherit that template and ignore any individually set templates; that is what is being done for this demo section.
+                        Applying a template to the parent of a vertical section of slides will cause all nested slides to inherit that template and ignore any individually set templates:
                     </p>
+                    <pre>
+                        <code>
+                            &lt;section data-template=&quot;demo-alt&quot;&gt;
+                                &lt;section&gt;
+                                    &lt;!-- slide --&gt;
+                                &lt;/section&gt;
+                                &lt;section&gt;
+                                    &lt;!-- slide --&gt;
+                                &lt;/section&gt;
+                            &lt;/section&gt;
+                        </code>
+                    </pre>
                 </section>
                 <section>
                     <p>
-                        Lecture includes generic styles and css variables for the following elements and classes in slide templates. You should be able to affect a lot without having to add additional HTML or styles of your own.
+                        Lecture includes generic styles and css variables for the following elements and classes in slide templates.
                     </p>
                     <pre>
                         <code>
@@ -575,6 +600,9 @@
                             &lt;div class=&quot;background&quot;&gt;&lt;/div&gt;
                         </code>
                     </pre>
+                    <p>
+                        You should be able to affect a lot without having to add additional HTML or styles of your own.
+                    </p>
                 </section>
             </section>
             <section>
